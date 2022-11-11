@@ -1,37 +1,43 @@
 * {
     font-family: "Nunito", sans-serif;
-    color: #ffffff;
 }
 
 body {
     margin: 0;
-    background-color: #224870;
+    background-color: #CDD971;
     transition: .3s ease all;
 }
+
 body.dark {
     margin: 0;
-    background-color: #b2fc76;
+    background-color: #4F3659;
 }
 
 .container {
     display: flex;
+    height: 100%;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    margin: 1% 0 1% 0;
 }
 
 .calculadora {
     display: grid;
-    grid-template-columns: repeat(4, 75px);
-    grid-template-rows: 160px repeat(5, 75px);
-    background-color: #00916e;
+    grid-template-columns: repeat(4, 65px);
+    grid-template-rows: 230px repeat(5, 65px);
+    background-color: #ffffff;
     padding: 15px;
     border-radius: 32px;
-    box-shadow: 15px 10px 0px 5px #00000033;
+    border-style: solid;
+    border-color: #909950;
+    border-width: 5px;
+    box-shadow: 10px 10px 0px 5px #90995070;
 }
 
 body.dark .calculadora {
-    background-color: #ffffff;
+    background-color: #221726;
+    border-color: #7B548C;
+    box-shadow: 10px 10px 0px 5px #22172670;
 }
 
 button {
@@ -41,12 +47,23 @@ button {
     border-radius: 32px;
     font-size: 1.5em;
     border: none;
-    background-color: #00916e;
-    box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #00ffc11f;
+    background-color: #7B548C;
+    box-shadow: 5px 5px 10px -3px #00000080, -5px -5px 15px 3px #7B548C80;
+    color: #221726;
+}
+
+body.dark button {
+    background-color: #42424270;
+    box-shadow: 5px 5px 10px -3px #00000090, -5px -5px 15px 3px #00000010;
+    color: #ffffff;
 }
 
 button:active {
-    background-color: #006f54;
+    background-color: #4F3659;
+}
+
+body.dark button:active {
+    background-color: #424242;
 }
 
 button:focus {
@@ -55,17 +72,23 @@ button:focus {
 
 .display {
     grid-column: 1 / -1;
-    padding: 16px;
+    padding: 10px;
     display: flex;
     margin: 10px 10px 20px;
     flex-direction: column;
-    align-items: flex-end;
-    background-color: #363636;
+    background-color: #00000033;
     border-radius: 20px;
     text-align: right;
     justify-content: space-between;
     word-break: break-all;
-    box-shadow: 0px 0px 0px 10px #00000033;
+    box-shadow: 0px 0px 0px 5px #42424270;
+    color: #424242;
+}
+
+body.dark .display {
+    background-color: #424242;
+    box-shadow: 0px 0px 0px 5px #42424270;
+    color: #ffffff;
 }
 
 .cel-2 {
@@ -77,12 +100,13 @@ button:focus {
 }
 
 #valor-anterior {
+    margin-top: 5%;
     font-size: 2em;
 }
 
 .switch {
-    background: red;
-    border-radius: 1000px;
+    background: #7B548C80;
+    border-radius: 100px;
     border: none;
     position: relative;
     cursor: pointer;
@@ -90,33 +114,47 @@ button:focus {
     outline: none;
 }
 
-.switch > span {
-    width: 30px;
+button#switch.switch {
     height: 30px;
-    line-height: 30px;
+    width: 70px;
+    justify-content: space-around;
+    box-shadow: none;
+}
+
+.switch > span {
+    width: 25px;
+    height: 25px;
     display: block;
     background: none;
     color: #ffffff;
 }
 
+body.dark .switch > span {
+    color: #424242;
+}
+
 .switch::after {
     content: "";
     display: block;
-    width: 30px;
+    width: 35px;
     height: 30px;
     position: absolute;
-    background: #f1f1f1;
+    background: #ffffff;
     top: 0;
     left: 0;
     right: unset;
     border-radius: 100px;
     transition: .3 ease all;
-    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+    box-shadow: 0px 0px 2px 1px #42424270;
 }
 
-.switch.active {
-    background: orange;
-    color: #000000;
+body.dark .switch::after {
+    background: #221726;
+    box-shadow: 0px 0px 2px 1px #00000070;
+}
+
+body.dark .switch.active {
+    background: #F1FF8580;
 }
 
 .switch.active::after {
