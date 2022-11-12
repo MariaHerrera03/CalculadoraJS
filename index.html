@@ -16,13 +16,15 @@
 <body>
     <div class="container">
         <div class="calculadora">
+            <div class="modos">
+                <button class="switch" id="switch">
+                    <span><i class="fa-solid fa-sun"></i></span>
+                    <span><i class="fa-solid fa-moon"></i></span>
+                </button>
+            </div>
             <div class="display">
-                    <button class="switch" id="switch">
-                        <span><i class="fa-solid fa-sun"></i></span>
-                        <span><i class="fa-solid fa-moon"></i></span>
-                    </button>
-                <div id="valor-anterior"></div>
-                <div id="valor-actual"></div>
+                <div id="valor-anterior">ccc</div>
+                <div id="valor-actual">cccc</div>
             </div>
             <button class="cel-2" onclick="display.borrarTodo()">C</button>
             <button onclick="display.borrar()">&larr;</button>
@@ -42,6 +44,8 @@
             <button class="cel-2 numero">0</button>
             <button class="numero">.</button>
             <button class="operador" value="igual">=</button>
+        </div>
+        <div class="sub-container">
         </div>
     </div>
 </body>
