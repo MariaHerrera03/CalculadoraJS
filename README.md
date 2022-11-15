@@ -13,7 +13,7 @@ Consiste en una única vista en la cual se encuentra una calculadora convenciona
 
 ## Design 🖍️
 A continuación, podrás darle un vistazo a la calculadora:
-![App Screenshot](https://drive.google.com/drive/folders/1mjl9Kl2CnCrjISo1dWq4MpcQ7QYfp33M)
+![App Screenshot](https://github.com/MariaHerrera03/CalculadoraJS/blob/main/assets/img/CalculadoraJS.png)
 
 
 ## Deployment 📂
